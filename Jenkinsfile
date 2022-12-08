@@ -8,7 +8,7 @@ pipeline {
                 script{
                     sh 'echo "Hello"'
                     sh 'ls -ltr'
-                    sh 'pwd'
+                    // sh 'pwd'
                 }
 
             }
