@@ -16,7 +16,7 @@ pipeline {
         stage('Install Packages'){
             steps {
                 script {
-                    sh 'pip install -r requirements.txt --allow-missing'
+                    sh 'pip install -r requirements.txt -- --allow-missing'
                 }
             }
           }
