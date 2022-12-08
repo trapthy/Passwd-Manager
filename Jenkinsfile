@@ -16,13 +16,14 @@ pipeline {
         stage('Install Packages'){
             steps {
                 script {
-                    sh 'pip install -r requirements.txt -- --allow-missing'
+                    sh 'pip install -r requirements.txt'
                 }
             }
           }
         stage('Scan') {
             steps{
-            snykSecurity additionalArguments: '--file=requirements.txt --allow-missing', organisation: 'trapthyshetty', projectName: 'trapthy / Passwd-Manager', snykInstallation: 'snyk@latest', snykTokenId: 'c058d01c-fa4f-4572-919a-abb7592ec9d9'
+            snykSecurity organisation: 'trapthyshetty', projectName: 'trapthy / Passwd-Manager', snykInstallation: 'snyk@latest', snykTokenId: 'c058d01c-fa4f-4572-919a-abb7592ec9d9'
+            sh ' snyk test --org=trapthyshetty --file=requirements.txt -- --allow-missing '
             }   
         }
 }
