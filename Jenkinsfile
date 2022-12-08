@@ -22,7 +22,7 @@ pipeline {
           }
         stage('Scan') {
             steps{
-            snykSecurity organisation: 'trapthyshetty', projectName: 'trapthy / Passwd-Manager', snykInstallation: 'snyk@latest', snykTokenId: 'c058d01c-fa4f-4572-919a-abb7592ec9d9', targetFile: 'pwdgentarget.json'
+            snykSecurity organisation: 'trapthyshetty', projectName: 'trapthy / Passwd-Manager', snykInstallation: 'snyk@latest', snykTokenId: 'c058d01c-fa4f-4572-919a-abb7592ec9d9', targetFile: 'package.json'
             }   
         }
 }
