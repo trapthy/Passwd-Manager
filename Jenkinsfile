@@ -12,6 +12,13 @@ pipeline {
                 }
 
             }
+            stage('Install Packages'){
+                steps {
+                script {
+                    sh 'pip -r requirements.txt'
+                }
+            }
+            }
         }
     }
 }
