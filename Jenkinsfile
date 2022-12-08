@@ -6,11 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script{
-
-                
-                git branch: "master",
-                    credentialsId: 'git',
-                    url: 'https://trapthyshetty@github.com/trapthy/Passwd-Manager.git'
+                sh 'echo "Hello"'
                 }
 
             }
