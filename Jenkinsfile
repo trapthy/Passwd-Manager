@@ -12,6 +12,7 @@ pipeline {
                 }
 
             }
+        }
         stage('Install Packages'){
             steps {
                 script {
@@ -20,5 +21,4 @@ pipeline {
             }
           }
         }
-    }
 }
