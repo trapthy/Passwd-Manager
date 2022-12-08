@@ -6,9 +6,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 script{
-                sh 'echo "Hello"'
-                sh 'ls -ltr'
-                sh 'pwd'
+                    sh 'echo "Hello"'
+                    sh 'ls -ltr'
+                    sh 'pwd'
                 }
 
             }
@@ -16,7 +16,7 @@ pipeline {
         stage('Install Packages'){
             steps {
                 script {
-                    sh 'pip -r requirements.txt'
+                    sh 'pip install -r requirements.txt'
                 }
             }
           }
